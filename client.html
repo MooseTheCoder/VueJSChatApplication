@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Chattr</title>
+    <meta charset="utf-8">
+    <script src="//cdn.markamations.com/vue"></script>
+    <script src="//cdn.markamations.com/jquery"></script>
+  </head>
+  <body>
+    <div id="chattr">
+      {{title}} {{version}}
+      <br />
+      <input type="text" id="username" placeholder="username" v-bind:value="username"><input type="button" value="Set" v-on:click="setUsername">
+      <div style="overflow-y:scroll; height:200px; border:1px solid black;">
+        <message v-for="message in messages" v-bind:message="message"></message>
+      </div>
+    <input type="text" id="message" placeholder="Message" />
+    <input type="button" id="send" value="Send" v-on:click="createNewMessage()" />
+  </div>
+    <script src="app.js"></script>
+  </body>
+</html>
